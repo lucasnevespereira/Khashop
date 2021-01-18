@@ -1,0 +1,22 @@
+{
+  "name": "khashop",
+  "version": "1.0.0",
+  "description": "Simple ecommerce platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasnevespereira/khashop.git"
+  },
+  "author": "Lucas Neves Pereira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasnevespereira/khashop/issues"
+  },
+  "homepage": "https://github.com/lucasnevespereira/khashop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
