@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
-import logo from "../logo.svg";
+// import logo from "../logo.svg";
 
 const Header = () => {
   return (
@@ -8,8 +8,8 @@ const Header = () => {
       <Navbar bg="light" expand="lg" collapseOnSelect>
         <Container>
           <Navbar.Brand className="logo" href="/">
-            <img src={logo} width="50" height="50" alt="logo" />
-            {/* KhaShop */}
+            {/* <img src={logo} width="100" height="50" alt="logo" /> */}
+            KhaShop
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
