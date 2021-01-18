@@ -1,12 +1,16 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
+import logo from "../logo.svg";
 
 const Header = () => {
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+      <Navbar bg="light" expand="lg" collapseOnSelect>
         <Container>
-          <Navbar.Brand href="/">KhaShop</Navbar.Brand>
+          <Navbar.Brand className="logo" href="/">
+            <img src={logo} width="50" height="50" alt="logo" />
+            {/* KhaShop */}
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">

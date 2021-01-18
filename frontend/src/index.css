@@ -1,3 +1,9 @@
 main {
   min-height: 80vh;
 }
+
+.logo {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
