@@ -19,6 +19,7 @@ import {
   ORDER_PAY_SUCCESS,
 } from "../constants/orderConstants";
 import axios from "axios";
+import { logout } from "./userActions";
 
 export const createOrder = (order) => async (dispatch, getState) => {
   try {
@@ -208,6 +209,7 @@ export const listOrders = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
+
     const { data } = await axios.get(`/api/orders`, config);
 
     dispatch({
@@ -215,12 +217,16 @@ export const listOrders = () => async (dispatch, getState) => {
       payload: data,
     });
   } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    if (message === "Not authorized, token failed") {
+      dispatch(logout());
+    }
     dispatch({
       type: ORDER_LIST_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
+      payload: message,
     });
   }
 };
